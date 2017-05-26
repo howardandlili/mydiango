@@ -15,13 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from django.shortcuts import HttpResponse
 
-def home(request):
-    return HttpResponse('<h1>Hello 黄炎')
-
+from zabbix import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^Home.html/', home),
+    url(r'^login', views.login),
+    url(r'^home', views.home),
 ]
