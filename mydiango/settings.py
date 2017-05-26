@@ -25,7 +25,7 @@ SECRET_KEY = '-h52dcn)oz6!8aza#&@usripl5zhv3%3!o0^iw7)#y&i$sns@2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['python.nanhutravel.com']
 
 
 # Application definition
