@@ -18,12 +18,10 @@ from django.contrib import admin
 
 from zabbix import views
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login', views.login),
-    url(r'^home', views.home),
+    url(r'^orm', views.orm),
     url(r'^index', views.index),
-    # url(r'^detail', views.detail),
-    url(r'^detail-(\d+).html', views.detail),
-    url(r'^content', views.Content.as_view()),
 ]

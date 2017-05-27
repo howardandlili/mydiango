@@ -2,28 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>登陆</title>
-    <style>
-        label{
-            width: 80px;
-            text-align: right;
-            display: inline-block;
-        }
-    </style>
-    <link rel="stylesheet" href="/static/css/comm.css">
+    <title>Title</title>
 </head>
 <body>
-    <form action="/login" method="post">
+    <form method="post">
+        <input type="text" name="username" placeholder="用户名"/>
+        <input type="password" name="pwd" placeholder="密码"/>
         <p>
-            <label>用户名：</label>
-            <input type="text" name="user" />
+            <input type="submit" value="提交" />
         </p>
-        <p>
-            <label>密码：</label>
-            <input type="password" name="pwd" /><span style="color: red">{{ error_mag }}</span>
-            <input type="submit" value="提交"/>
-        </p>
-
     </form>
     <script src="/static/js/jquery-1.12.4.min.js"></script>
 </body>
