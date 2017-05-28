@@ -8,19 +8,18 @@ import os
 from zabbix import models
 
 def login(request):
-    if request.method == 'GET':
-        render(request,'login.html')
     if request.method == 'POST':
         u = request.POST.get('username')
         p = request.POST.get('pwd')
-        obj = False
+        print(u,p)
+        obj = models.UserInfo.objects.filter(username=u, password=p).first()
         if obj:
-            return redirect('index.html',{'username': u})
+            return redirect('index.html',{'user_obj': obj})
         else:
             render(request,'login.html')
     else:
         # PUT,DELETE,HEAD,OPTION...
-        return redirect('/index/')
+        return render(request, 'login.html')
 
 
 
@@ -42,4 +41,4 @@ def orm(request):
 
 
 def index(request):
-    pass
+    return render(request,'index.html')
